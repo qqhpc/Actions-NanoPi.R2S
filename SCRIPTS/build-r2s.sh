@@ -5,7 +5,7 @@ pwd
 
 cd /workdir/openwrt
 
-# 移除 SNAPSHOT 标签
+echo "移除 SNAPSHOT 标签"
 sed -i 's,-SNAPSHOT,,g' include/version.mk
 sed -i 's,-SNAPSHOT,,g' package/base-files/image-config.in
 
@@ -34,7 +34,7 @@ echo "安装feeds"
 ./scripts/feeds install -a
 
 echo "下载config"
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/NanoPi-R2S/r2s.fq.config.txt
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/r2s.fq.config.txt
 mv r2s.fq.config.txt .config
 
 echo "下载dl"
