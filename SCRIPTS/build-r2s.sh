@@ -6,8 +6,8 @@ pwd
 cd /workdir/openwrt
 
 echo "移除 SNAPSHOT 标签"
-sed -i 's,-SNAPSHOT,,g' include/version.mk
-sed -i 's,-SNAPSHOT,,g' package/base-files/image-config.in
+sed -i 's/22.03-SNAPSHOT/22.03.0/g' include/version.mk
+sed -i 's/22.03-SNAPSHOT/22.03.0/g' package/base-files/image-config.in
 
 echo "添加 passwall"
 echo "src-git passwall https://github.com/qqhpc/xiaorouji-openwrt-passwall.git" >> feeds.conf.default
