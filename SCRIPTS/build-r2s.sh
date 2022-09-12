@@ -34,9 +34,12 @@ svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang fe
 echo "安装 feeds"
 ./scripts/feeds install -a
 
-echo "下载 config"
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/r2s.fq.config.txt
-mv r2s.fq.config.txt .config
+#echo "下载 config"
+#wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/r2s.fq.config.txt
+#mv r2s.fq.config.txt .config
+
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/testconfig.txt
+mv testconfig.txt .config
 
 echo "下载 dl"
 make download -j2
