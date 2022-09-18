@@ -38,8 +38,7 @@ jobs:
       run: |
         df -hT $PWD
         echo "开始下载openwrt源码"
-        mv lede openwrt
-        git clone $REPO_URL
+        git clone $REPO_URL openwrt
         echo "GITHUB_WORKSPACE的目录"
         echo $GITHUB_WORKSPACE
         echo "目前所在目录"
