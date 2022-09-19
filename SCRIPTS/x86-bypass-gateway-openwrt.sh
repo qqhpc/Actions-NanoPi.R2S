@@ -28,6 +28,10 @@ svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang fe
 echo "安装 feeds"
 ./scripts/feeds install -a
 
+./scripts/feeds update -a
+rm -rf feeds/packages/lang/golang && svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
+./scripts/feeds install -a
+
 echo "下载 config"
 rm -rf .config
 wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.x86.ply.config.txt
