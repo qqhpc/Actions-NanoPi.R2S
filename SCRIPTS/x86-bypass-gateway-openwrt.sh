@@ -20,14 +20,12 @@ echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >>
 
 echo "下载 feeds"
 ./scripts/feeds update -a
-./scripts/feeds update -a
 
 echo "更新 go"
 rm -rf feeds/packages/lang/golang
 svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
 
 echo "安装 feeds"
-./scripts/feeds install -a
 ./scripts/feeds install -a
 
 echo "下载 config"
