@@ -16,9 +16,7 @@ sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/qqhp
 # ssr-plus依赖sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
-cd ./package/
-svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash
-cd ..
+svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash ./package/luci-app-openclash
 
 echo "下载 feeds"
 ./scripts/feeds update -a
