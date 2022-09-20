@@ -18,6 +18,9 @@ sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://
 echo "添加 openclash"
 echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
 
+echo "添加 luci-app-adguardhome"
+echo "src-git adguardhome https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git;master" >> feeds.conf.default
+
 echo "下载 feeds"
 ./scripts/feeds update -a
 
