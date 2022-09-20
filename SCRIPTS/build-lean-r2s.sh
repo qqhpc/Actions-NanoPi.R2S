@@ -19,7 +19,7 @@ echo "添加 openclash"
 echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
 
 echo "添加 kenzok8-packages"
-echo "src-git kenzok8_packages https://github.com/qqhpc/kenzok8-openwrt-packages.git;master" >> feeds.conf.default
+echo "src-git kenzok8packages https://github.com/qqhpc/kenzok8-openwrt-packages.git;master" >> feeds.conf.default
 
 echo "添加 kenzok8_small"
 echo "src-git small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
