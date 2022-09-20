@@ -5,17 +5,11 @@ pwd
 
 cd /workdir/openwrt
 
-# echo "移除 SNAPSHOT 标签"
-# 必须根据当前版本及时修改
-# sed -i 's/22.03-SNAPSHOT/22.03.0/g' include/version.mk
-# sed -i 's/22.03-SNAPSHOT/22.03.0/g' package/base-files/image-config.in
-
 echo "添加 passwall"
 echo "src-git passwall https://github.com/qqhpc/xiaorouji-openwrt-passwall.git" >> feeds.conf.default
 
 echo "添加 passwall2"
 echo "src-git passwall2 https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git" >> feeds.conf.default
-
 
 echo "添加 helloworld"
 sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://github.com/qqhpc/fw876-helloworld.git" >> feeds.conf.default
@@ -35,8 +29,8 @@ echo "安装 feeds"
 ./scripts/feeds install -a
 
 echo "下载 config"
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/r2s.fq.config.txt
-mv r2s.fq.config.txt .config
+wget 
+mv lean.r2s.config.txt .config
 
 echo "下载 dl"
 make download -j2
