@@ -21,6 +21,12 @@ echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >>
 echo "添加 luci-app-adguardhome"
 echo "src-git adguardhome https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git;master" >> feeds.conf.default
 
+echo "添加 kenzok8-openwrt-packages"
+echo "src-git kenzok8-openwrt-packages https://github.com/qqhpc/kenzok8-openwrt-packages.git;master" >> feeds.conf.default
+
+echo "添加 kenzok8-small"
+echo "src-git kenzok8-small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
+
 echo "下载 feeds"
 ./scripts/feeds update -a
 
