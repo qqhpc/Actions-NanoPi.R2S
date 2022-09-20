@@ -55,8 +55,8 @@ jobs:
         pwd
         ls
         cd ./SCRIPTS/
-        chmod +x x86-bypass-gateway-openwrt.sh
-        ./x86-bypass-gateway-openwrt.sh
+        chmod +x build-lean-x86-bypass-gateway-openwrt.sh
+        ./build-lean-x86-bypass-gateway-openwrt.sh
         
     - name: Organize files
       id: organize
