@@ -18,19 +18,19 @@ sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://
 echo "添加 openclash"
 echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
 
-echo "添加 luci-app-adguardhome"
+echo "添加 luci_app_adguardhome"
 echo "src-git adguardhome https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git;master" >> feeds.conf.default
 
-echo "添加 kenzok8-openwrt-packages"
+echo "添加 kenzok8_packages"
 echo "src-git kenzok8-openwrt-packages https://github.com/qqhpc/kenzok8-openwrt-packages.git;master" >> feeds.conf.default
 
-echo "添加 kenzok8-small"
+echo "添加 kenzok8_small"
 echo "src-git kenzok8-small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
 
-echo "添加 lua-maxminddb"
+echo "添加 lua.maxminddb"
 echo "src-git lua-maxminddb https://github.com/qqhpc/jerrykuku-lua-maxminddb.git;master" >> feeds.conf.default
 
-echo "添加 luci-app-vssr"
+echo "添加 luci.app.vssr"
 echo "src-git luci-app-vssr https://github.com/qqhpc/jerrykuku-luci-app-vssr.git;master" >> feeds.conf.default
 
 
