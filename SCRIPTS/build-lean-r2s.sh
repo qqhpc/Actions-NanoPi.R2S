@@ -35,7 +35,8 @@ echo "安装 feeds"
 ./scripts/feeds install -a
 
 echo "下载 config"
-wget 
+rm -rf .config
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.r2s.config.txt
 mv lean.r2s.config.txt .config
 
 echo "下载 dl"
