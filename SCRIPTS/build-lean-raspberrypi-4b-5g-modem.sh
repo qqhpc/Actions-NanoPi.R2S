@@ -24,6 +24,9 @@ echo "src-git kenzok8packages https://github.com/qqhpc/kenzok8-openwrt-packages.
 #echo "添加 kenzok8_small"
 #echo "src-git small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
 
+echo "添加 node"
+echo "src-git node https://github.com/nxhack/openwrt-node-packages.git;openwrt-22.03" >> feeds.conf.default
+
 echo "下载 feeds"
 ./scripts/feeds update -a
 
