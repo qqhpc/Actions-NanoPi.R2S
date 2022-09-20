@@ -27,6 +27,13 @@ echo "src-git kenzok8-openwrt-packages https://github.com/qqhpc/kenzok8-openwrt-
 echo "添加 kenzok8-small"
 echo "src-git kenzok8-small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
 
+echo "添加 lua-maxminddb"
+echo "src-git lua-maxminddb https://github.com/qqhpc/jerrykuku-lua-maxminddb.git;master" >> feeds.conf.default
+
+echo "添加 luci-app-vssr"
+echo "src-git luci-app-vssr https://github.com/qqhpc/jerrykuku-luci-app-vssr.git;master" >> feeds.conf.default
+
+
 echo "下载 feeds"
 ./scripts/feeds update -a
 
