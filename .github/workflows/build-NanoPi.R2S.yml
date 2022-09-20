@@ -38,7 +38,7 @@ jobs:
       run: |
         df -hT $PWD
         echo "开始下载openwrt源码"
-        git clone -b $REPO_BRANCH $REPO_URL
+        git clone $REPO_URL openwrt
         echo "GITHUB_WORKSPACE的目录"
         echo $GITHUB_WORKSPACE
         echo "目前所在目录"
@@ -50,13 +50,13 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         echo "源码下载完成"
 
-    - name: Make 
+    - name: Build 
       run: |
         pwd
         ls
         cd ./SCRIPTS/
-        chmod +x build-r2s.sh
-        ./build-r2s.sh
+        chmod +x build-lean-r2s.sh
+        ./build-lean-r2s.sh
         
     - name: Organize files
       id: organize
