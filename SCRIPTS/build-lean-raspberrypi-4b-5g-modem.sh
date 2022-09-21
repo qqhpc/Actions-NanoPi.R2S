@@ -16,7 +16,6 @@ sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://
 # ssr-plus依赖sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
-#echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
 svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash ./package/openclash
 
 echo "添加 luci-app-adguardhome"
@@ -32,6 +31,7 @@ svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang fe
 echo "安装 feeds"
 ./scripts/feeds install -a
 
+echo "安装 feeds again"
 ./scripts/feeds install -a
 
 echo "下载 config"
