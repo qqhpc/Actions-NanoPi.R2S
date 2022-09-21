@@ -20,7 +20,7 @@ echo "添加 openclash"
 svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash ./package/openclash
 
 echo "添加 luci-app-adguardhome"
-git clone https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git ./package
+git clone https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git ./package/luciadguardhome
 
 #echo "添加 kenzok8_small"
 #echo "src-git small https://github.com/qqhpc/kenzok8-small.git;master" >> feeds.conf.default
