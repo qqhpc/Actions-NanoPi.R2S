@@ -16,7 +16,8 @@ sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://
 # ssr-plus依赖sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
-echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
+#echo "src-git OpenClash https://github.com/qqhpc/vernesong-OpenClash.git;dev" >> feeds.conf.default
+svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash ./package/openclash
 
 echo "添加 kenzok8-packages"
 echo "src-git kenzok8packages https://github.com/qqhpc/kenzok8-openwrt-packages.git;master" >> feeds.conf.default
