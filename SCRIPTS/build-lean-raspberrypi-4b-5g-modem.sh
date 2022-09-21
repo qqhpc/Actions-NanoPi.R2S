@@ -36,8 +36,8 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.raspberrypi4b.5gmod.config.txt
-mv lean.raspberrypi4b.5gmod.config.txt .config
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.raspberrypi.4b.5g.modem.config.txt
+mv lean.raspberrypi.4b.5g.modem.config.txt .config
 
 echo "下载 dl"
 make download -j2
