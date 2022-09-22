@@ -35,7 +35,7 @@ echo "安装 feeds"
 
 echo "下载 config"
 rm -rf .config
-wget 
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.x86.sdant.config.txt
 mv lean.x86.sdant.config.txt .config
 
 echo "下载 dl"
