@@ -6,13 +6,13 @@ pwd
 cd /workdir/openwrt
 
 echo "添加 passwall"
-echo "src-git passwall https://github.com/qqhpc/xiaorouji-openwrt-passwall.git" >> feeds.conf.default
+git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
 
 echo "添加 passwall2"
-echo "src-git passwall2 https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git" >> feeds.conf.default
+git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git ./package/passwall2
 
 echo "添加 helloworld"
-sed -i "/helloworld/d" "feeds.conf.default" && echo "src-git helloworld https://github.com/qqhpc/fw876-helloworld.git" >> feeds.conf.default
+sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/qqhpc/fw876-helloworld.git ./package/helloworld
 # ssr-plus依赖sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
