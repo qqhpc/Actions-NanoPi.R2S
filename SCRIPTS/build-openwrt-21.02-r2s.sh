@@ -21,9 +21,6 @@ svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-op
 echo "添加 luci-app-adguardhome"
 git clone https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git ./package/luciadguardhome
 
-echo "添加 lean packages"
-svn export https://github.com/coolsnowwolf/luci/trunk/applications ./package/lean
-
 echo "下载 feeds"
 ./scripts/feeds update -a
 
