@@ -36,7 +36,7 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget 
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/21.02/.config/nanopi-r2s/openwrt-21.02-r2s.config.txt
 mv openwrt-21.02-r2s.config.txt .config
 
 echo "下载 dl"
