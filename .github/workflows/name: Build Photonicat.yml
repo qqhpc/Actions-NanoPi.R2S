@@ -54,7 +54,7 @@ jobs:
         ls
         cd /workdir/rk3568-linux-sdk/
         ./rk3568-config-photonicat-openwrt.sh
-        cd ./SCRIPTS/
+        cd /home/runner/work/Actions-OpenWRT/Actions-OpenWRT/SCRIPTS/
         chmod +x build-photonicat.sh
         ./build-photonicat.sh
         
