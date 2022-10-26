@@ -54,9 +54,8 @@ jobs:
         ls
         cd /workdir/rk3568-linux-sdk/
         ./rk3568-config-photonicat-openwrt.sh
-        cd /home/runner/work/Actions-OpenWRT/Actions-OpenWRT/SCRIPTS/
-        chmod +x build-photonicat.sh
-        ./build-photonicat.sh
+        export CROSS_COMPILE=aarch64-linux-gnu-
+        ./build.sh
         
     - name: Organize files
       id: organize
