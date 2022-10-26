@@ -37,16 +37,13 @@ jobs:
       run: |
         df -hT $PWD
         echo "开始下载openwrt源码"
-        git clone https://github.com/photonicat/rockchip_rk3568_linux_sdk -b openwrt --single-branch openwrt
+        git clone https://github.com/photonicat/rockchip_rk3568_linux_sdk -b openwrt --single-branch rk3568-linux-sdk
         echo "GITHUB_WORKSPACE的目录"
         echo $GITHUB_WORKSPACE
         echo "目前所在目录"
         pwd
         echo "目前目录的内容"
         ls
-        echo "/workdir/openwrt的内容"
-        ls /workdir/openwrt
-        ln -sf /workdir/openwrt/openwrt $GITHUB_WORKSPACE/openwrt
         echo "源码下载完成"
 
     - name: Build 
@@ -61,7 +58,7 @@ jobs:
       id: organize
       if: true && !failure() && !cancelled()
       run: |
-        cd /workdir/openwrt/bin/targets/*/*
+        cd /workdir/rk3568-linux-sdk/openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
@@ -78,7 +75,7 @@ jobs:
       if: env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: /workdir/openwrt/bin
+        path: /workdir/rk3568-linux-sdk/openwrt/bin
 
     - name: Generate release tag
       id: tag
