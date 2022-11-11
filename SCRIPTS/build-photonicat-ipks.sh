@@ -5,11 +5,11 @@ pwd
 
 cd /workdir/openwrt
 
-#echo "添加 passwall"
-#git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
+echo "添加 passwall"
+git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
 
-#echo "添加 passwall2"
-#git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git ./package/passwall2
+echo "添加 passwall2"
+git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git ./package/passwall2
 
 echo "添加 helloworld"
 sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/qqhpc/fw876-helloworld.git ./package/helloworld
@@ -32,12 +32,12 @@ echo "安装 feeds"
 ./scripts/feeds install -a
 
 echo "安装 feeds again"
-./scripts/feeds install -a
+./scripts/feeds install -a -f
 
 echo "下载 config"
 rm -rf .config
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/lean.r2s.config.txt
-mv lean.r2s.config.txt .config
+wget 
+mv photonicat.ipks.config.txt .config
 
 echo "下载 dl"
 make download -j2
