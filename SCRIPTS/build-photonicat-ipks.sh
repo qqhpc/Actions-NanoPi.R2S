@@ -43,4 +43,5 @@ echo "下载 dl"
 make download -j2
 
 echo "编译固件"
+export CROSS_COMPILE=aarch64-linux-gnu-
 make -j$(expr $(nproc) + 1)  V=s
