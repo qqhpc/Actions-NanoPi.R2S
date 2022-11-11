@@ -36,7 +36,7 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget 
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/21.02/.config/photonicat/photonicat.ipks.config.txt
 mv photonicat.ipks.config.txt .config
 
 echo "下载 dl"
