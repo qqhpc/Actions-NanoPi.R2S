@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/21.02/.con
 mv photonicat.ipks.config.txt .config
 
 echo "下载 dl"
-make download -j2
+make download -j2 V=s
 
 echo "编译固件"
 export CROSS_COMPILE=aarch64-linux-gnu-
