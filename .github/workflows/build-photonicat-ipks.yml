@@ -1,4 +1,4 @@
-name: Build Lean NanoPi R2S
+name: Build Photonicat Ipks
 
 on:
   repository_dispatch:
