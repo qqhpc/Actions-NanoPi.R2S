@@ -28,7 +28,7 @@ echo "安装 feeds"
 ./scripts/feeds install -a
 
 echo "安装 feeds again"
-./scripts/feeds install -a
+./scripts/feeds install -a -f
 
 echo "下载 config"
 rm -rf .config
@@ -36,7 +36,7 @@ wget
 mv openwrt-22.03-r2s.config.txt .config
 
 echo "下载 dl"
-make download -j2
+make download -j2 V=s
 
 echo "编译固件"
 make -j$(expr $(nproc) + 1)  V=s
