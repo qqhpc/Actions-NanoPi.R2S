@@ -1,4 +1,4 @@
-name: Build OpenWRT-22.03 X86 Sdant OpenWRT
+name: Build OpenWRT-22.03 X86 Sdant
 
 on:
   repository_dispatch:
