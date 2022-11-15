@@ -32,7 +32,7 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget 
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/x86/64/openwrt-22.03-x86-sdant.config.txt
 mv openwrt-22.03-x86-sdant.config.txt .config
 
 echo "下载 dl"
