@@ -32,7 +32,7 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget 
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk3328/NanoPi-R2S/openwrt-22.03-r2s.config.txt
 mv openwrt-22.03-r2s.config.txt .config
 
 echo "下载 dl"
