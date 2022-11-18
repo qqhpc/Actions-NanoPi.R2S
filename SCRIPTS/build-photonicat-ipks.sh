@@ -7,6 +7,7 @@ cd /workdir/openwrt
 
 echo "添加 passwall"
 echo "src-git passwall_packages https://github.com/qqhpc/xiaorouji-openwrt-passwall.git;packages" >> feeds.conf.default
+echo "src-git passwall_luci https://github.com/qqhpc/xiaorouji-openwrt-passwall.git;luci" >> feeds.conf.default
 
 echo "添加 passwall2"
 echo "src-git passwall2 https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git;main" >> feeds.conf.default
