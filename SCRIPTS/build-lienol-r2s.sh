@@ -6,7 +6,8 @@ pwd
 cd /workdir/openwrt
 
 echo "添加 passwall"
-git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
+git clone -b packages https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwallpackages
+git clone -b luci https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwallluci
 
 echo "添加 passwall2"
 git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git ./package/passwall2
