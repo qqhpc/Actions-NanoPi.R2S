@@ -8,7 +8,7 @@ cd /workdir/openwrt
 echo "添加 passwall"
 git clone -b packages https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
 git clone -b luci https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/luci-app-passwall
-cp -r ./package/luci-app-passwall ./package/passwall/
+cp -r ./package/luci-app-passwall/luci-app-passwall ./package/passwall/
 rm -rf ./package/luci-app-passwall
 
 echo "添加 passwall2"
