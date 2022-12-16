@@ -6,23 +6,23 @@ pwd
 cd /workdir/openwrt
 
 echo "添加 passwall"
-git clone -b packages https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/passwall
-git clone -b luci https://github.com/qqhpc/xiaorouji-openwrt-passwall.git ./package/luci-app-passwall
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git ./package/passwall
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git ./package/luci-app-passwall
 cp -r ./package/luci-app-passwall/luci-app-passwall ./package/passwall/
 rm -rf ./package/luci-app-passwall
 
 echo "添加 passwall2"
-git clone https://github.com/qqhpc/xiaorouji-openwrt-passwall2.git ./package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2.git ./package/passwall2
 
 echo "添加 helloworld"
-sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/qqhpc/fw876-helloworld.git ./package/helloworld
+sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/fw876/helloworld.git ./package/helloworld
 # ssr-plus的依赖:sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
-svn export https://github.com/qqhpc/vernesong-OpenClash/branches/dev/luci-app-openclash ./package/openclash
+svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./package/openclash
 
 echo "添加 luci-app-adguardhome"
-git clone https://github.com/qqhpc/rufengsuixing-luci-app-adguardhome.git ./package/luciadguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/luciadguardhome
 
 echo "下载 feeds"
 ./scripts/feeds update -a
