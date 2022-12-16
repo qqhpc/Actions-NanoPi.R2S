@@ -19,7 +19,7 @@ sed -i "/helloworld/d" "feeds.conf.default" && git clone https://github.com/fw87
 # ssr-plus的依赖:sagernet-core,Sagernet内核和V2ray/Xray内核冲突
 
 echo "添加 openclash"
-svn export https://github.com/qqhpc/vernesong-OpenClash/trunk/luci-app-openclash ./package/openclash
+svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./package/openclash
 
 echo "添加 luci-app-adguardhome"
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/luciadguardhome
