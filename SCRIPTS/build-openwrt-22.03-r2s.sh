@@ -1,6 +1,12 @@
 #!/bin/bash
 # 2022.11.14
 
+echo "开始下载openwrt源码"
+git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git /workdir/openwrt
+echo "/workdir/openwrt的内容"
+ls /workdir/openwrt
+echo "源码下载完成"
+
 pwd
 
 cd /workdir/openwrt
