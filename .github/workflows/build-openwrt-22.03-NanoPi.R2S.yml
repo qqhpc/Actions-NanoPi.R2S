@@ -30,24 +30,7 @@ jobs:
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
-        
-    - name: Get code
-      working-directory: /workdir
-      run: |
-        df -hT $PWD
-        echo "开始下载openwrt源码"
-        git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git openwrt
-        echo "GITHUB_WORKSPACE的目录"
-        echo $GITHUB_WORKSPACE
-        echo "目前所在目录"
-        pwd
-        echo "目前目录的内容"
-        ls
-        echo "/workdir/openwrt的内容"
-        ls /workdir/openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        echo "源码下载完成"
+        sudo chown $USER:$GROUPS /workdir        
 
     - name: Build Firmware
       run: |
