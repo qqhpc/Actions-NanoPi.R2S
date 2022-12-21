@@ -28,7 +28,7 @@ echo "添加 openclash"
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./package/openclash
 
 echo "添加 luci-app-adguardhome"
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/luciadguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/luci-app-adguardhome
 
 echo "下载 feeds"
 ./scripts/feeds update -a
