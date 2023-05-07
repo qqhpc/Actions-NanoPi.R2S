@@ -32,26 +32,6 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         
-    - name: Get code
-      working-directory: /workdir
-      run: |
-        df -hT $PWD
-        echo "开始下载openwrt源码"
-        git clone https://github.com/photonicat/rockchip_rk3568_linux_sdk -b openwrt --single-branch rk3568-linux-sdk
-        cd rk3568-linux-sdk
-        git submodule update --init
-        ./rk3568-config-photonicat-openwrt.sh
-        ln -sf /workdir/rk3568-linux-sdk/openwrt /workdir/openwrt
-        echo "GITHUB_WORKSPACE的目录"
-        echo $GITHUB_WORKSPACE
-        echo "目前所在目录"
-        pwd
-        echo "目前目录的内容"
-        ls
-        echo "/workdir/openwrt的内容"
-        ls /workdir/openwrt
-        echo "源码下载完成"
-
     - name: Build Firmware and Ipks
       run: |
         pwd
