@@ -33,10 +33,6 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/lu
 echo "下载 feeds"
 ./scripts/feeds update -a
 
-echo "更新 go"
-rm -rf feeds/packages/lang/golang
-svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
-
 echo "安装 feeds"
 ./scripts/feeds install -a
 
@@ -45,11 +41,11 @@ echo "安装 feeds again"
 
 echo "下载 config"
 rm -rf .config
-wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/21.02/.config/photonicat/photonicat.ipks.config.txt
+wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/Lean/.config/photonicat.ipks.config.txt
 mv photonicat.ipks.config.txt .config
 
 echo "下载 dl"
-make download -j2 V=s
+make download -j1 V=s && make download -j1 V=s
 
 echo "编译固件"
 export CROSS_COMPILE=aarch64-linux-gnu-
