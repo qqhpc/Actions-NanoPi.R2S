@@ -3,6 +3,14 @@
 
 pwd
 
+echo "开始下载openwrt源码"
+git clone https://github.com/coolsnowwolf/lede /workdir/openwrt
+echo "/workdir/openwrt的内容"
+ls /workdir/openwrt
+echo "源码下载完成"
+
+pwd
+
 cd /workdir/openwrt
 
 echo "添加 passwall"
