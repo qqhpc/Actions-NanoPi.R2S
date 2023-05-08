@@ -49,4 +49,5 @@ make download -j1 V=s && make download -j1 V=s
 
 echo "编译固件"
 export CROSS_COMPILE=aarch64-linux-gnu-
-make -j$(expr $(nproc) + 1)  V=s
+# make -j$(expr $(nproc) + 1)  V=s
+make V=s -j1
