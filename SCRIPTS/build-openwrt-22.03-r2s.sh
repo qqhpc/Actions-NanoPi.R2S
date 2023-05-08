@@ -45,7 +45,8 @@ wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/rk33
 mv openwrt-22.03-r2s.config.txt .config
 
 echo "下载 dl"
-make download -j2 V=s
+make download -j1 V=s
 
 echo "编译固件"
-make -j$(expr $(nproc) + 1)  V=s
+# make -j$(expr $(nproc) + 1)  V=s
+make V=s -j1
