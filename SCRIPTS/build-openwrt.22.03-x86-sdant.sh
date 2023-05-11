@@ -4,9 +4,9 @@
 pwd
 
 echo "开始下载openwrt源码"
-git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git openwrt
+git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git /workdir/openwrt
 echo "/workdir/openwrt的内容"
-s /workdir/openwrt
+ls /workdir/openwrt
 ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 echo "源码下载完成"
 
