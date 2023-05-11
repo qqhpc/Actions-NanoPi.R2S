@@ -46,8 +46,9 @@ wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/x86/
 mv openwrt-22.03-x86-sdant.config.txt .config
 
 echo "下载 dl"
-make download -j2 V=s && make download -j2 V=s && find dl -size -1024c -exec rm -f {} ;
-make download -j2 V=s
+make download -j1 V=s && make download -j1 V=s && find dl -size -1024c -exec rm -f {} ;
+make download -j1 V=s && make download -j1
 
 echo "编译固件"
-make -j$(expr $(nproc) + 1)  V=s
+# make -j$(expr $(nproc) + 1)  V=s
+make V=s -j1
