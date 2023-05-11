@@ -3,6 +3,13 @@
 
 pwd
 
+echo "开始下载openwrt源码"
+git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git openwrt
+echo "/workdir/openwrt的内容"
+s /workdir/openwrt
+ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+echo "源码下载完成"
+
 cd /workdir/openwrt
 
 echo "添加 passwall"
