@@ -31,6 +31,10 @@ svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./pac
 echo "添加 luci-app-adguardhome"
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ./package/luciadguardhome
 
+cd /workdir/openwrt
+
+pwd
+
 echo "下载 feeds"
 ./scripts/feeds update -a
 
@@ -40,14 +44,21 @@ echo "安装 feeds"
 echo "安装 feeds again"
 ./scripts/feeds install -a -f
 
+pwd
+cd /workdir/openwrt
+
 echo "下载 config"
 rm -rf .config
 wget https://raw.githubusercontent.com/qqhpc/configfiles/main/openwrt/22.03/x86/64/openwrt-22.03-x86-sdant.config.txt
 mv openwrt-22.03-x86-sdant.config.txt .config
 
+cd /workdir/openwrt
+
 echo "下载 dl"
 make download -j1 V=s && make download -j1 V=s && find dl -size -1024c -exec rm -f {} ;
 make download -j1 V=s && make download -j1
+
+cd /workdir/openwrt
 
 echo "编译固件"
 # make -j$(expr $(nproc) + 1)  V=s
